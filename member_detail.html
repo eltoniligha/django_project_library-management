@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ member.first_name }} {{ member.last_name }}</title>
+</head>
+<body>
+    <h1>{{ member.first_name }} {{ member.last_name }}</h1>
+    <p>Email: {{ member.email }}</p>
+    <p>Joined Date: {{ member.joined_date }}</p>
+
+    <a href="{% url 'member_update' member.pk %}">Edit</a>
+    <a href="{% url 'member_delete' member.pk %}">Delete</a>
+    <a href="{% url 'member_list' %}">Back to Member List</a>
+</body>
+</html>
